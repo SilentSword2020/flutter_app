@@ -1,0 +1,28 @@
+import 'package:english_words/english_words.dart';
+import 'package:flutter/material.dart';
+
+void main() => runApp(new MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+
+    final wordPair = new WordPair.random();
+
+    return new MaterialApp(
+      //切换app时，上面显示的标题
+      title: 'Welcome to Flutter',
+      //页面内容
+      home: new Scaffold(
+        //标题栏
+        appBar: new AppBar(
+          title: new Text('StartUp'),
+        ),
+        body: new Center(//居中
+          //child: new Text('Hello World !!'),
+          child: new Text(wordPair.asPascalCase),
+        ),
+      ),
+    );
+  }
+}
