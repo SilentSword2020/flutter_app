@@ -65,4 +65,23 @@ class _ShoppingListState extends State<ShoppingList> {
       ),
     );
   }
+
+  @override
+  void dispose() {
+    super.dispose();
+    //TODO 当一个状态对象不再需要时，框架调用状态对象的dispose(): 清理资源
+  }
+
+  @override
+  void didUpdateWidget(ShoppingList oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    //TODO  如果希望在widget属性更改时收到通知，则可以覆盖didUpdateWidget函数，以便将旧的oldWidget与当前widget进行比较
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    //TODO 子类化State可以重写initState，以完成仅需要执行一次的工作
+    //TODO initState的实现中需要调用super.initState()
+  }
 }

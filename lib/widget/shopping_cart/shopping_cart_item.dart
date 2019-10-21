@@ -13,7 +13,7 @@ class ShoppingListItem extends StatelessWidget {
       //由于下面的 super(key: new ObjectKey(product))调用父类的构造方法,
       // this还没有初始化，只能用一个临时形参来传递
       : product = product,
-        super(key: new ObjectKey(product));
+        super(key: new ObjectKey(product)); //设置key:widget重建时匹配
 
   final Product product;
   final bool inCart;
