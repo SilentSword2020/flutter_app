@@ -3,7 +3,7 @@ import 'package:flutter_app/widget/common/common_widget.dart';
 
 //https://api.flutter.dev/flutter/material/RaisedButton-class.html
 void main() {
-  showWidgetByCallback(fetchWidgetCallback);
+  showWidgetByCallback(title: "RaisedButton", fetchWidgetCallback: fetchWidgetCallback);
 }
 
 Widget fetchWidgetCallback(BuildContext context) {
@@ -24,7 +24,7 @@ class MyStatelessWidget extends StatelessWidget {
             onPressed: null,
             child: Text('Disabled Button', style: TextStyle(fontSize: 20)),
           ),
-          const SizedBox(height: 30),//空白
+          const SizedBox(height: 30), //空白
           RaisedButton(
             onPressed: () {},
             child: const Text('Enabled Button', style: TextStyle(fontSize: 20)),

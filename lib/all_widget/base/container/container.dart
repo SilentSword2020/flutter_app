@@ -3,7 +3,7 @@ import 'package:flutter_app/widget/common/common_widget.dart';
 
 //https://docs.flutter.io/flutter/widgets/Container-class.html
 void main() {
-  showWidgetByCallback((BuildContext context) {
+  showWidgetByCallback(title:"container", fetchWidgetCallback: (BuildContext context) {
     return new Center(
       child: Container(
         margin: const EdgeInsets.all(10.0),

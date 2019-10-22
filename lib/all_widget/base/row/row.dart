@@ -3,7 +3,7 @@ import 'package:flutter_app/widget/common/common_widget.dart';
 
 //https://docs.flutter.io/flutter/widgets/Row-class.html
 void main() {
-  showWidgetByCallback(fetchWidgetCallback);
+  showWidgetByCallback(title: "row", fetchWidgetCallback: fetchWidgetCallback);
 }
 
 Widget fetchWidgetCallback(BuildContext context) {

@@ -3,7 +3,7 @@ import 'package:flutter_app/widget/common/common_widget.dart';
 
 //https://api.flutter.dev/flutter/widgets/Image-class.html
 void main() {
-  showWidgetByCallback(fetchWidgetCallback);
+  showWidgetByCallback(title: "image", fetchWidgetCallback: fetchWidgetCallback);
 }
 
 Widget fetchWidgetCallback(BuildContext context) {
@@ -19,5 +19,4 @@ Widget fetchWidgetCallback(BuildContext context) {
 *TODO new Image.network, for obtaining an image from a URL.
 *TODO new Image.file, for obtaining an image from a File.
 *TODO new Image.memory, for obtaining an image from a Uint8List.
-* 
- */
+*/

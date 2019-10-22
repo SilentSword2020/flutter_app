@@ -3,7 +3,7 @@ import 'package:flutter_app/widget/common/common_widget.dart';
 
 //https://api.flutter.dev/flutter/widgets/Image-class.html
 void main() {
-  showWidgetByCallback(fetchWidgetCallback);
+  showWidgetByCallback(title: "image_network", fetchWidgetCallback: fetchWidgetCallback);
 }
 
 Widget fetchWidgetCallback(BuildContext context) {

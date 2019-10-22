@@ -3,7 +3,7 @@ import 'package:flutter_app/widget/common/common_widget.dart';
 
 //https://api.flutter.dev/flutter/material/InkWell-class.html
 void main() {
-  showWidgetByCallback(fetchWidgetCallback);
+  showWidgetByCallback(title: "InkWell", fetchWidgetCallback: fetchWidgetCallback);
 }
 
 Widget fetchWidgetCallback(BuildContext context) {
@@ -16,17 +16,20 @@ class MyStatefulWidget extends StatefulWidget {
   @override
   _MyStatefulWidgetState createState() => _MyStatefulWidgetState();
 }
+
 //TODO 波纹效果
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   double sideLength = 50;
 
   Widget build(BuildContext context) {
     return Center(
-      child: AnimatedContainer( //动画容器
+      child: AnimatedContainer(
+        //动画容器
         height: sideLength,
         width: sideLength,
         duration: Duration(seconds: 1),
-        curve: Curves.easeIn,//相关于动画加速器
+        curve: Curves.easeIn,
+        //相关于动画加速器
         child: Material(
           color: Colors.blue,
           child: InkWell(

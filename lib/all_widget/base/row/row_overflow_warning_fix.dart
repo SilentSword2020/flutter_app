@@ -4,7 +4,7 @@ import 'package:flutter_app/widget/common/common_widget.dart';
 
 //https://docs.flutter.io/flutter/widgets/Row-class.html
 void main() {
-  showWidgetByCallback(fetchWidgetCallback);
+  showWidgetByCallback(title: "row_overflow_warning_fix", fetchWidgetCallback: fetchWidgetCallback);
 }
 
 Widget fetchWidgetCallback(BuildContext context) {

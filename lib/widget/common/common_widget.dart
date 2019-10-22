@@ -7,10 +7,10 @@ void showWidget(Widget widget) {
   ));
 }
 
-void showWidgetByCallback(FetchWidgetCallback fetchWidgetCallback) {
+void showWidgetByCallback({String title, FetchWidgetCallback fetchWidgetCallback}) {
   runApp(new MaterialApp(
     title: 'Flutter Tutorial',
-    home: new TutorialHome(null, fetchWidgetCallback: fetchWidgetCallback),
+    home: new TutorialHome(null, title: title, fetchWidgetCallback: fetchWidgetCallback),
   ));
 }
 
@@ -19,8 +19,9 @@ typedef Widget FetchWidgetCallback(BuildContext context);
 class TutorialHome extends StatelessWidget {
   final Widget bodyWidget;
   final FetchWidgetCallback fetchWidgetCallback;
+  final String title;
 
-  TutorialHome(this.bodyWidget, {Key key, this.fetchWidgetCallback}) : super(key: key); //构造函数，可选命名参数
+  TutorialHome(this.bodyWidget, {Key key, this.title, this.fetchWidgetCallback}) : super(key: key); //构造函数，可选命名参数
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +34,7 @@ class TutorialHome extends StatelessWidget {
           tooltip: 'Navigation menu', //长按时，显示提示
           onPressed: null,
         ),
-        title: new Text('Example title'),
+        title: new Text(this.title != null ? this.title : 'Example title'),
         //显示在标题之后
         actions: <Widget>[
           new IconButton(

@@ -3,7 +3,7 @@ import 'package:flutter_app/widget/common/common_widget.dart';
 
 //https://api.flutter.dev/flutter/widgets/Column-class.html
 void main() {
-  showWidgetByCallback(fetchWidgetCallback);
+  showWidgetByCallback(title: "column_algin", fetchWidgetCallback: fetchWidgetCallback);
 }
 
 Widget fetchWidgetCallback(BuildContext context) {
@@ -17,10 +17,7 @@ Widget fetchWidgetCallback(BuildContext context) {
       Text('We will fight up close, seize the moment and stay in it'),
       Text('It’s either that or meet the business end of a bayonet'),
       Text('The code word is ‘Rochambeau,’ dig me?'),
-      Text('Rochambeau!',
-          style: DefaultTextStyle.of(context)
-              .style
-              .apply(fontSizeFactor: 1.0, color: Colors.blue)),
+      Text('Rochambeau!', style: DefaultTextStyle.of(context).style.apply(fontSizeFactor: 1.0, color: Colors.blue)),
     ],
   );
 }
