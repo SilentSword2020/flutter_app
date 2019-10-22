@@ -20,7 +20,7 @@ class TutorialHome extends StatelessWidget {
   final Widget bodyWidget;
   final FetchWidgetCallback fetchWidgetCallback;
 
-  TutorialHome(this.bodyWidget, {this.fetchWidgetCallback}); //构造函数，可选命名参数
+  TutorialHome(this.bodyWidget, {Key key, this.fetchWidgetCallback}) : super(key: key); //构造函数，可选命名参数
 
   @override
   Widget build(BuildContext context) {
@@ -55,9 +55,5 @@ class TutorialHome extends StatelessWidget {
     );
   }
 
-  Widget getBodyWidget(BuildContext context) => bodyWidget == null
-      ? (this.fetchWidgetCallback != null
-          ? this.fetchWidgetCallback(context)
-          : null)
-      : bodyWidget;
+  Widget getBodyWidget(BuildContext context) => bodyWidget == null ? (this.fetchWidgetCallback != null ? this.fetchWidgetCallback(context) : null) : bodyWidget;
 }
