@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/widget/common/common_widget.dart';
 
+//https://docs.flutter.io/flutter/widgets/Row-class.html
 void main() {
   showWidgetByCallback(fetchWidgetCallback);
 }

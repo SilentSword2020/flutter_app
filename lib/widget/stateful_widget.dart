@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'common/common_widget.dart';
 
+//https://flutterchina.club/widgets-intro/
 void main() {
   runApp(new MaterialApp(
     title: 'Flutter Tutorial',

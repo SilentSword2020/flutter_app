@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/widget/shopping_cart/shopping_cart_item.dart';
 
+//https://flutterchina.club/widgets-intro/
 void main() {
   runApp(new MaterialApp(
     title: 'Shopping App',

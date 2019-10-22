@@ -45,8 +45,7 @@ class TutorialHome extends StatelessWidget {
       ),
       //body占屏幕的大部分
       body: new Center(
-        child:
-            bodyWidget == null ? this.fetchWidgetCallback(context) : bodyWidget,
+        child: getBodyWidget(context),
       ),
       floatingActionButton: new FloatingActionButton(
         tooltip: 'Add', // used by assistive technologies
@@ -55,4 +54,10 @@ class TutorialHome extends StatelessWidget {
       ),
     );
   }
+
+  Widget getBodyWidget(BuildContext context) => bodyWidget == null
+      ? (this.fetchWidgetCallback != null
+          ? this.fetchWidgetCallback(context)
+          : null)
+      : bodyWidget;
 }

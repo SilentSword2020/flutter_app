@@ -1,21 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/widget/common/common_widget.dart';
 
-//https://docs.flutter.io/flutter/widgets/Row-class.html
+//https://api.flutter.dev/flutter/widgets/Column-class.html
 void main() {
   showWidgetByCallback(fetchWidgetCallback);
 }
 
 Widget fetchWidgetCallback(BuildContext context) {
-  return Row(
+  return Column(
     children: <Widget>[
-      //三个widget等分水平空间
-      Expanded(
-        child: Text('Deliver features faster', textAlign: TextAlign.center),
-      ),
-      Expanded(
-        child: Text('Craft beautiful UIs', textAlign: TextAlign.center),
-      ),
+      Text('Deliver features faster'),
+      Text('Craft beautiful UIs'),
       Expanded(
         child: FittedBox(
           fit: BoxFit.contain, // otherwise the logo will be tiny

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+//https://flutterchina.club/widgets-intro/
 class Product {
   const Product({this.name});
 

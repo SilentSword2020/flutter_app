@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/widget/common/common_widget.dart';
 
+//https://docs.flutter.io/flutter/widgets/Container-class.html
 void main() {
   showWidgetByCallback((BuildContext context) {
     return new Center(
