@@ -1,9 +1,26 @@
 import 'package:flutter/material.dart';
 
-class TutorialHome extends StatelessWidget {
-  final Widget _bodyWidget;
+void showWidget(Widget widget) {
+  runApp(new MaterialApp(
+    title: 'Flutter Tutorial',
+    home: new TutorialHome(widget),
+  ));
+}
 
-  TutorialHome(this._bodyWidget);
+void showWidgetByCallback(FetchWidgetCallback fetchWidgetCallback) {
+  runApp(new MaterialApp(
+    title: 'Flutter Tutorial',
+    home: new TutorialHome(null, fetchWidgetCallback: fetchWidgetCallback),
+  ));
+}
+
+typedef Widget FetchWidgetCallback(BuildContext context);
+
+class TutorialHome extends StatelessWidget {
+  final Widget bodyWidget;
+  final FetchWidgetCallback fetchWidgetCallback;
+
+  TutorialHome(this.bodyWidget, {this.fetchWidgetCallback}); //构造函数，可选命名参数
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +45,8 @@ class TutorialHome extends StatelessWidget {
       ),
       //body占屏幕的大部分
       body: new Center(
-        child: _bodyWidget,
+        child:
+            bodyWidget == null ? this.fetchWidgetCallback(context) : bodyWidget,
       ),
       floatingActionButton: new FloatingActionButton(
         tooltip: 'Add', // used by assistive technologies
