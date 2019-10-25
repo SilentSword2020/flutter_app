@@ -45,7 +45,7 @@ class TutorialHome extends StatelessWidget {
             icon: new Icon(Icons.search),
             tooltip: 'Search', //长按时，显示提示
             onPressed: () {
-              showBottomSheet("SnackBar tip");
+              showBottomSheet("BottomSheet tip");
             },
           ),
         ],
@@ -59,7 +59,6 @@ class TutorialHome extends StatelessWidget {
         child: new Icon(Icons.add),
         onPressed: () {
           showSnackBar("SnackBar tip");
-          //showBottomSheet("BottomSheet tip");
         },
       ),
     );
