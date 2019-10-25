@@ -59,6 +59,7 @@ class TutorialHome extends StatelessWidget {
         child: new Icon(Icons.add),
         onPressed: () {
           showSnackBar("SnackBar tip");
+          //showBottomSheet("BottomSheet tip");
         },
       ),
     );
@@ -78,7 +79,7 @@ class TutorialHome extends StatelessWidget {
           color: Colors.blue,
           child: new Row(mainAxisAlignment: MainAxisAlignment.spaceAround, //平分空间显示
               children: <Widget>[
-                new Text(message, style: style: DefaultTextStyle.of(context).style.apply(fontSizeFactor: 1.0, color: Colors.w),),
+                new Text(message, style: DefaultTextStyle.of(context).style.apply(fontSizeFactor: 1.0, color: Colors.white),),
               ]));
     });
   }
