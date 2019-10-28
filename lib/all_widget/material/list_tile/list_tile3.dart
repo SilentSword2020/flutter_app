@@ -27,6 +27,37 @@ class MyApp extends StatelessWidget {
   }
 }
 
+/// This is the stateless widget that the main application instantiates.
+class MyStatelessWidget extends StatelessWidget {
+  MyStatelessWidget({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      padding: const EdgeInsets.all(8.0),
+      itemExtent: 106.0, //item的高度
+      children: <CustomListItem>[
+        CustomListItem(
+          user: 'Flutter',
+          viewCount: 999000,
+          thumbnail: Container(
+            decoration: const BoxDecoration(color: Colors.blue),
+          ),
+          title: 'The Flutter YouTube Channel',
+        ),
+        CustomListItem(
+          user: 'Dash',
+          viewCount: 884000,
+          thumbnail: Container(
+            decoration: const BoxDecoration(color: Colors.yellow),
+          ),
+          title: 'Announcing Flutter 1.0',
+        ),
+      ],
+    );
+  }
+}
+
 class CustomListItem extends StatelessWidget {
   const CustomListItem({
     this.thumbnail,
@@ -95,11 +126,13 @@ class _VideoDescription extends StatelessWidget {
               fontSize: 14.0,
             ),
           ),
+          //中间的空白点位
           const Padding(padding: EdgeInsets.symmetric(vertical: 2.0)),
           Text(
             user,
             style: const TextStyle(fontSize: 10.0),
           ),
+          //中间的空白点位
           const Padding(padding: EdgeInsets.symmetric(vertical: 1.0)),
           Text(
             '$viewCount views',
@@ -107,37 +140,6 @@ class _VideoDescription extends StatelessWidget {
           ),
         ],
       ),
-    );
-  }
-}
-
-/// This is the stateless widget that the main application instantiates.
-class MyStatelessWidget extends StatelessWidget {
-  MyStatelessWidget({Key key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return ListView(
-      padding: const EdgeInsets.all(8.0),
-      itemExtent: 106.0,
-      children: <CustomListItem>[
-        CustomListItem(
-          user: 'Flutter',
-          viewCount: 999000,
-          thumbnail: Container(
-            decoration: const BoxDecoration(color: Colors.blue),
-          ),
-          title: 'The Flutter YouTube Channel',
-        ),
-        CustomListItem(
-          user: 'Dash',
-          viewCount: 884000,
-          thumbnail: Container(
-            decoration: const BoxDecoration(color: Colors.yellow),
-          ),
-          title: 'Announcing Flutter 1.0',
-        ),
-      ],
     );
   }
 }
